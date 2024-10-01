@@ -1,5 +1,6 @@
 package com.bettinggorund.point.domain.entity;
 
+import com.bettinggorund.point._common.*;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,4 +24,10 @@ public class Point extends BaseEntity {
     private String userToken;
     private Long amount;
 
+    @Builder
+    public Point(String userToken) {
+        this.pointToken = TokenGenerator.randomCharacterWithPrefix(POINT_TOKEN_PREFIX);
+        this.userToken = userToken;
+        this.amount = 0L;
+    }
 }
