@@ -12,7 +12,7 @@ import static lombok.AccessLevel.*;
 @NoArgsConstructor(access = PROTECTED)
 public class Point extends BaseEntity {
 
-    private static final String USER_TOKEN_PREFIX = "point_";
+    private static final String POINT_TOKEN_PREFIX = "point_";
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
